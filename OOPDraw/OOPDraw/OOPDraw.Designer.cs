@@ -33,6 +33,8 @@
             this.LineWidthLabel = new System.Windows.Forms.Label();
             this.ColourLabel = new System.Windows.Forms.Label();
             this.Colour = new System.Windows.Forms.ComboBox();
+            this.ShapesLabel = new System.Windows.Forms.Label();
+            this.Shape = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +76,7 @@
             // ColourLabel
             // 
             this.ColourLabel.AutoSize = true;
-            this.ColourLabel.Location = new System.Drawing.Point(29, 114);
+            this.ColourLabel.Location = new System.Drawing.Point(24, 114);
             this.ColourLabel.Name = "ColourLabel";
             this.ColourLabel.Size = new System.Drawing.Size(37, 13);
             this.ColourLabel.TabIndex = 4;
@@ -87,17 +89,39 @@
             "Red",
             "Green",
             "Blue"});
-            this.Colour.Location = new System.Drawing.Point(27, 140);
+            this.Colour.Location = new System.Drawing.Point(22, 140);
             this.Colour.Name = "Colour";
             this.Colour.Size = new System.Drawing.Size(184, 21);
             this.Colour.TabIndex = 3;
             this.Colour.SelectedIndexChanged += new System.EventHandler(this.Colour_SelectedIndexChanged);
+            // 
+            // ShapesLabel
+            // 
+            this.ShapesLabel.AutoSize = true;
+            this.ShapesLabel.Location = new System.Drawing.Point(24, 213);
+            this.ShapesLabel.Name = "ShapesLabel";
+            this.ShapesLabel.Size = new System.Drawing.Size(43, 13);
+            this.ShapesLabel.TabIndex = 6;
+            this.ShapesLabel.Text = "Shapes";
+            // 
+            // Shape
+            // 
+            this.Shape.FormattingEnabled = true;
+            this.Shape.Items.AddRange(new object[] {
+            "Line",
+            "Rectangle"});
+            this.Shape.Location = new System.Drawing.Point(22, 239);
+            this.Shape.Name = "Shape";
+            this.Shape.Size = new System.Drawing.Size(184, 21);
+            this.Shape.TabIndex = 5;
             // 
             // OOPDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1403, 618);
+            this.Controls.Add(this.ShapesLabel);
+            this.Controls.Add(this.Shape);
             this.Controls.Add(this.ColourLabel);
             this.Controls.Add(this.Colour);
             this.Controls.Add(this.LineWidthLabel);
@@ -118,6 +142,8 @@
         private System.Windows.Forms.Label LineWidthLabel;
         private System.Windows.Forms.Label ColourLabel;
         private System.Windows.Forms.ComboBox Colour;
+        private System.Windows.Forms.Label ShapesLabel;
+        private System.Windows.Forms.ComboBox Shape;
     }
 }
 
