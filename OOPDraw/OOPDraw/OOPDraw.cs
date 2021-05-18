@@ -33,6 +33,10 @@ namespace OOPDraw
             {
                 shape.Draw(gr);
             }
+            if (selectionBox != null)
+            {
+                selectionBox.Draw(gr);
+            }
         }
         private void Canvas_MouseDown(object sender, MouseEventArgs e)
         {
@@ -87,6 +91,10 @@ namespace OOPDraw
                     case "Draw":
                         shape.GrowTo(e.X, e.Y);
                         break;
+                    case "Select":
+                        selectionBox.GrowTo(e.X, e.Y);
+                        SelectShapes();
+                        break;
                 }
                 lastMousePosition = e.Location;
                 Refresh();
@@ -96,6 +104,7 @@ namespace OOPDraw
         {
             dragging = false;
             lastMousePosition = Point.Empty;
+            selectionBox = null;
             Refresh();
         }
 
@@ -151,6 +160,11 @@ namespace OOPDraw
                     if (selectionBox.FullySurrounds(s)) s.Select();
                 
             }
+        }
+
+        private List<Shape> GetSelectedShapes()
+        {
+            return shapes.Where(s => s.Selected).ToList();
         }
     }
 }

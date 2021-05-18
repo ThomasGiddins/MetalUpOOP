@@ -133,7 +133,8 @@
             this.Action.FormattingEnabled = true;
             this.Action.Items.AddRange(new object[] {
             "Draw",
-            "Move"});
+            "Move",
+            "Select"});
             this.Action.Location = new System.Drawing.Point(22, 320);
             this.Action.Name = "Action";
             this.Action.Size = new System.Drawing.Size(184, 21);
