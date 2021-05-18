@@ -78,17 +78,14 @@ namespace OOPDraw
         {
             if (dragging)
             {
-                Shape shape = shapes.Last();
+                
                 switch (Action.Text)
                 {
                     case "Move":
-                        if (lastMousePosition == Point.Empty)
-                        {
-                            lastMousePosition = e.Location;                           
-                        }
-                        shape.MoveBy(e.X - lastMousePosition.X, e.Y - lastMousePosition.Y);
+                        MoveSelectedShapes(e);
                         break;
                     case "Draw":
+                        Shape shape = shapes.Last();
                         shape.GrowTo(e.X, e.Y);
                         break;
                     case "Select":
@@ -165,6 +162,14 @@ namespace OOPDraw
         private List<Shape> GetSelectedShapes()
         {
             return shapes.Where(s => s.Selected).ToList();
+        }
+
+        private void MoveSelectedShapes(MouseEventArgs e)
+        {
+            foreach (Shape s in shapes)
+            {
+                s.MoveBy(e.X - lastMousePosition.X, e.Y - lastMousePosition.Y);
+            }
         }
     }
 }
