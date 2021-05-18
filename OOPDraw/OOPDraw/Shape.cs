@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
+
 namespace OOPDraw
 {
     public abstract class Shape
@@ -60,6 +61,8 @@ namespace OOPDraw
             int w = Math.Max(X1, X2) - x;
             int h = Math.Max(Y1, X2) - y;
             return (x, y, w, h);
+
+           
         }
     }
 }

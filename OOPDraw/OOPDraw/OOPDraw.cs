@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace OOPDraw
@@ -20,6 +19,7 @@ namespace OOPDraw
             LineWidth.SelectedItem = "Medium";
             Colour.SelectedItem = "Green";
             Shape.SelectedItem = "Line";
+            Console.WriteLine("Test");
         }
         Pen currentPen = new Pen(Color.Black);
         bool dragging = false;
