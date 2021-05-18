@@ -35,6 +35,8 @@
             this.Colour = new System.Windows.Forms.ComboBox();
             this.ShapesLabel = new System.Windows.Forms.Label();
             this.Shape = new System.Windows.Forms.ComboBox();
+            this.ActionLabel = new System.Windows.Forms.Label();
+            this.Action = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,11 +119,33 @@
             this.Shape.Size = new System.Drawing.Size(184, 21);
             this.Shape.TabIndex = 5;
             // 
+            // ActionLabel
+            // 
+            this.ActionLabel.AutoSize = true;
+            this.ActionLabel.Location = new System.Drawing.Point(24, 294);
+            this.ActionLabel.Name = "ActionLabel";
+            this.ActionLabel.Size = new System.Drawing.Size(37, 13);
+            this.ActionLabel.TabIndex = 8;
+            this.ActionLabel.Text = "Action";
+            // 
+            // Action
+            // 
+            this.Action.FormattingEnabled = true;
+            this.Action.Items.AddRange(new object[] {
+            "Draw",
+            "Move"});
+            this.Action.Location = new System.Drawing.Point(22, 320);
+            this.Action.Name = "Action";
+            this.Action.Size = new System.Drawing.Size(184, 21);
+            this.Action.TabIndex = 7;
+            // 
             // OOPDraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1403, 618);
+            this.Controls.Add(this.ActionLabel);
+            this.Controls.Add(this.Action);
             this.Controls.Add(this.ShapesLabel);
             this.Controls.Add(this.Shape);
             this.Controls.Add(this.ColourLabel);
@@ -146,6 +170,8 @@
         private System.Windows.Forms.ComboBox Colour;
         private System.Windows.Forms.Label ShapesLabel;
         private System.Windows.Forms.ComboBox Shape;
+        private System.Windows.Forms.Label ActionLabel;
+        private System.Windows.Forms.ComboBox Action;
     }
 }
 
