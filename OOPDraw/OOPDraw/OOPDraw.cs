@@ -154,8 +154,7 @@ namespace OOPDraw
             DeselectAll();
             foreach (Shape s in shapes)
             {
-                    if (selectionBox.FullySurrounds(s)) s.Select();
-                
+                    if (selectionBox.FullySurrounds(s)) s.Select();        
             }
         }
 
@@ -166,10 +165,35 @@ namespace OOPDraw
 
         private void MoveSelectedShapes(MouseEventArgs e)
         {
-            foreach (Shape s in shapes)
+            foreach (Shape s in GetSelectedShapes())
             {
                 s.MoveBy(e.X - lastMousePosition.X, e.Y - lastMousePosition.Y);
             }
+        }
+
+        private void Action_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (Action.Text)
+            {
+                case "Group":
+                    GroupSelectedShapes();
+                    break;
+            }
+        }
+
+        private void GroupSelectedShapes()
+        {
+            var members = GetSelectedShapes();
+            if (members.Count < 2) return; //Group has no effect
+            CompositeShape compS = new CompositeShape(members);
+            compS.Select();
+            shapes.Add(compS);
+            foreach (Shape m in members)
+            {
+                shapes.Remove(m);
+                m.Deselect();
+            }
+            Refresh();
         }
     }
 }
