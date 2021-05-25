@@ -42,10 +42,7 @@ namespace OOPDraw
             {
                 m.MoveBy(xDelta, yDelta);
             }
-            X1 += xDelta;
-            Y1 += yDelta;
-            X2 += xDelta;
-            Y2 += yDelta;
+            CalculateEnclosingRectangle();
         }
     }
 }

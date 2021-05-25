@@ -37,6 +37,8 @@ namespace OOPDraw
             {
                 selectionBox.Draw(gr);
             }
+
+           
         }
         private void Canvas_MouseDown(object sender, MouseEventArgs e)
         {
@@ -181,6 +183,9 @@ namespace OOPDraw
                 case "Delete":
                     DeleteSelectedShapes();
                     break;
+                case "Duplicate":
+                    DuplicateSelectedShapes();
+                    break;
             }
         }
 
@@ -206,6 +211,19 @@ namespace OOPDraw
                 shapes.Remove(s);
             }
             Refresh();
+        }
+
+        private void DuplicateSelectedShapes(PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            var members = GetSelectedShapes();
+            if (members.Count < 2)
+            {
+                foreach (Shape m in members)
+                {
+                    Line.clone(g, m);
+                }
+            }
         }
     }
 }

@@ -21,6 +21,7 @@ namespace OOPDraw
         public override void Draw(Graphics g)
         {
             DrawingFunctions.DrawClosedArc(g, this);
+            clone(g, this);
         }
 
         public override void GrowTo(int x2, int y2)
@@ -29,6 +30,12 @@ namespace OOPDraw
 
             X2 = X1 + diameter;
             Y2 = Y1 + diameter;
+        }
+
+        public void clone(Graphics g, Shape s)
+        {
+            Circle circleClone = new Circle(s.Pen, s.X1 + 50, s.Y1 + 50, s.X2 + 50, s.Y2 + 50);          
+            DrawingFunctions.DrawClosedArc(g, circleClone);
         }
     }
 }

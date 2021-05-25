@@ -9,7 +9,6 @@ namespace OOPDraw
 {
     public class Line : Shape
     {
-
         public Line(Pen p, int x1, int y1, int x2, int y2) : base(p, x1, y1, x2, y2)
         {
         }
@@ -22,6 +21,9 @@ namespace OOPDraw
             g.DrawLine(Pen, X1, Y1, X2, Y2);
         }
 
-        
+        public static void clone(Graphics g, Shape s)
+        {
+            g.DrawLine(s.Pen, s.X1 + 50, s.Y1 + 50, s.X2 + 50, s.Y2 + 50);
+        }
     }
 }
