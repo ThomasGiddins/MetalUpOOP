@@ -135,7 +135,8 @@
             "Draw",
             "Move",
             "Select",
-            "Group"});
+            "Group",
+            "Delete"});
             this.Action.Location = new System.Drawing.Point(22, 320);
             this.Action.Name = "Action";
             this.Action.Size = new System.Drawing.Size(184, 21);

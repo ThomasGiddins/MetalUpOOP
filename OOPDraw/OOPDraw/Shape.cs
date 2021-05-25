@@ -64,7 +64,7 @@ namespace OOPDraw
             return (x, y, w, h);           
         }
 
-        public void MoveBy(int xDelta, int yDelta)
+        public virtual void MoveBy(int xDelta, int yDelta)
         {
             X1 += xDelta;
             Y1 += yDelta;

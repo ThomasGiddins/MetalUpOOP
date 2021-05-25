@@ -178,6 +178,9 @@ namespace OOPDraw
                 case "Group":
                     GroupSelectedShapes();
                     break;
+                case "Delete":
+                    DeleteSelectedShapes();
+                    break;
             }
         }
 
@@ -192,6 +195,15 @@ namespace OOPDraw
             {
                 shapes.Remove(m);
                 m.Deselect();
+            }
+            Refresh();
+        }
+
+        private void DeleteSelectedShapes()
+        {
+            foreach (Shape s in GetSelectedShapes())
+            {
+                shapes.Remove(s);
             }
             Refresh();
         }

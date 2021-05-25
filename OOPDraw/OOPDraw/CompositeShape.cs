@@ -36,7 +36,7 @@ namespace OOPDraw
             if (Selected) g.DrawRectangle(Pen, X1, Y1, X2 - X1, Y2 - Y1);
         }
 
-        public virtual void MoveBy(int xDelta, int yDelta)
+        public override void MoveBy(int xDelta, int yDelta)
         {
             foreach (Shape m in Components)
             {
