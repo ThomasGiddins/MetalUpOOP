@@ -21,9 +21,10 @@ namespace OOPDraw
             g.DrawLine(Pen, X1, Y1, X2, Y2);
         }
 
-        public static void clone(Graphics g, Shape s)
+        public static Line clone(Shape s)
         {
-            g.DrawLine(s.Pen, s.X1 + 50, s.Y1 + 50, s.X2 + 50, s.Y2 + 50);
+            Line lineClone = new Line(s.Pen, s.X1, s.Y1, s.X2, s.Y2);
+            return lineClone;
         }
     }
 }

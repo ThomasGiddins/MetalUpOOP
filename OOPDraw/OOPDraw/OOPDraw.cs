@@ -184,7 +184,7 @@ namespace OOPDraw
                     DeleteSelectedShapes();
                     break;
                 case "Duplicate":
-                    DuplicateSelectedShapes();
+                    Line clonedLine = DuplicateSelectedShapes();                  
                     break;
             }
         }
@@ -213,17 +213,20 @@ namespace OOPDraw
             Refresh();
         }
 
-        private void DuplicateSelectedShapes(PaintEventArgs e)
+        private Line DuplicateSelectedShapes()
         {
-            Graphics g = e.Graphics;
+            Pen p = new Pen(Color.Black, 1.0F);
+            Line clonedLine = new Line(p, 0, 0, 0, 0);
             var members = GetSelectedShapes();
             if (members.Count < 2)
             {
                 foreach (Shape m in members)
                 {
-                    Line.clone(g, m);
+                    clonedLine = Line.clone(m);
                 }
             }
+
+            return clonedLine;
         }
     }
 }
