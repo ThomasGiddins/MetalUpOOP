@@ -83,5 +83,10 @@ namespace OOPDraw
             Selected = false;
             Pen.DashStyle = DashStyle.Solid;
         }
+
+        public abstract Shape Clone();
+        //{
+        //    return new Shape(Pen, X1, Y1.X2, Y2);
+        //}
     }
 }

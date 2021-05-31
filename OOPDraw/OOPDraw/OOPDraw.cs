@@ -183,7 +183,8 @@ namespace OOPDraw
                 case "Delete":
                     DeleteSelectedShapes();
                     break;
-                case "Duplicate":              
+                case "Duplicate":
+                    DuplicateSelectedShapes();
                     break;
             }
         }
@@ -212,6 +213,19 @@ namespace OOPDraw
             Refresh();
         }
 
+        private void DuplicateSelectedShapes()
+        {
+            foreach (Shape m in GetSelectedShapes())
+            {
+                m.Deselect();
+                Shape Hold = m;
+                Hold.Clone();
+                Hold.MoveBy(50, 50);
+                Hold.Select();
+                shapes.Add(Hold);
+            }
+            Refresh();
+        }
        
     }
 }

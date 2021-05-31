@@ -3,14 +3,14 @@
   <Class Name="OOPDraw.Shape" Collapsed="true">
     <Position X="3.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAIAACgAAAAADBAAAAIABQAAAAAABQAAAIAI=</HashCode>
+      <HashCode>AAAAEAAAAIAACgAAAAADBAAAAIABQAAAAAABQAAAIBI=</HashCode>
       <FileName>Shape.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOPDraw.Rectangle" Collapsed="true">
     <Position X="2.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Rectangle.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -25,21 +25,21 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Line.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOPDraw.Ellipse" Collapsed="true">
     <Position X="6.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Ellipse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="OOPDraw.CompositeShape">
     <Position X="4.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAoAAAAAAAACAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAoAAAAAAAACAAAAAAAAAAAAAAAAAIBA=</HashCode>
       <FileName>CompositeShape.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

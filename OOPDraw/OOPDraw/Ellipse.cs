@@ -21,5 +21,10 @@ namespace OOPDraw
         {
             DrawingFunctions.DrawClosedArc(g, this);
         }
+
+        public override Shape Clone()
+        {
+            return new Line(Pen, X1, Y1, X2, Y2);
+        }
     }
 }

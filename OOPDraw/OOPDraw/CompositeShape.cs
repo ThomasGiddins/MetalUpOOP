@@ -44,5 +44,16 @@ namespace OOPDraw
             }
             CalculateEnclosingRectangle();
         }
+
+        public override Shape Clone()
+        {
+            List<Shape> Clone = new List<Shape>();
+            foreach (Shape m in Components)
+            {
+                Clone.Add(m);
+            }
+
+            return new CompositeShape(Clone);
+        }
     }
 }
